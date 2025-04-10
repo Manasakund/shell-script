@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+curl https://raw.githubusercontent.com/iam-veeramalla/sandbox/main/log/dummylog01122022.log | grep ERROR
+# curl is used to directly fetch (read) the details of a file in internet
+
+
+# same action can be done by using wget which is used to download the file from internet
+
+wget https://raw.githubusercontent.com/iam-veeramalla/sandbox/main/log/dummylog01122022.log 
+
+cat dummylog01122022.log | grep ERROR
+
+# Dummylog01122022.log is downloaded and saved in current directory
+#And the read the file using "cat"

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Cleanup function
+cleanup() {
+    echo "Cleanup: Interrupt signal received. Exiting..."
+    # Cleanup actions go here
+    exit 1
+}
+
+# Set up a trap to catch SIGINT (Ctrl+C) and execute the cleanup function
+trap cleanup SIGINT
+
+# Main script logic
+echo "Script started. Press Ctrl+C to trigger cleanup."
+
+# Simulate a long-running process
+sleep 10
+
+# End of script
+echo "Script completed."

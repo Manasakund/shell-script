@@ -1,0 +1,7 @@
+#!/bin/bash
+
+trap "echo Hi" SIGINT
+# Hi is printed when cntl + c is receiver
+sleep 10
+
+# waits for 10 sconds to enter some signl
