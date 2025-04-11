@@ -1,0 +1,12 @@
+---
+- name: Install and Configure httpd
+  hosts: all
+  become: true  # Required for installing packages and managing services
+  tasks:
+    - name: Install httpd package
+      shell: apt install httpd
+
+    - name: Start httpd service
+      shell: systemctl start httpd
+
+
